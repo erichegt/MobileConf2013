@@ -1,13 +1,13 @@
 package br.com.caelum.mobileconf.app;
 
-import br.com.caelum.mobileconf.modelo.Carro;
-import br.com.caelum.mobileconf.modelo.Combustivel;
-import br.com.caelum.mobileconf.modelo.Fabricante;
-import br.com.caelum.mobileconf.persistence.DAO;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import br.com.caelum.mobileconf.modelo.Carro;
+import br.com.caelum.mobileconf.modelo.Combustivel;
+import br.com.caelum.mobileconf.modelo.Fabricante;
+import br.com.caelum.mobileconf.persistence.DAO;
 
 public class CarrosApplication extends Application{
 	
@@ -35,6 +35,8 @@ public class CarrosApplication extends Application{
 			dao.save(corsa);
 			dao.save(punto);
 			dao.save(palio);
+			
+			dao.close();
 			
 			Editor editor = preferences.edit();
 			editor.putBoolean("banco", true);

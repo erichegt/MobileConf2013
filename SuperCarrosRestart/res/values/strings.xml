@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="app_name">SuperCarrosRestart</string>
+	<string name="tag_intent_implicita">restart</string>
+</resources>
