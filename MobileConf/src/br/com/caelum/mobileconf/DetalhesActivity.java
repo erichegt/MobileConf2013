@@ -7,6 +7,9 @@ import br.com.caelum.mobileconf.modelo.Carro;
 
 public class DetalhesActivity extends Activity {
 	
+	//Sério mesmo?
+	private static final String CARRO_SELECIONADO = "carroSelecionado";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,7 +21,7 @@ public class DetalhesActivity extends Activity {
 		TextView motorizacao = (TextView) findViewById(R.id.motorizacao);
 		TextView combustivel = (TextView) findViewById(R.id.combustivel);
 		
-		Carro carroSelecionado = (Carro) getIntent().getSerializableExtra("carroSelecionado");
+		Carro carroSelecionado = (Carro) getIntent().getSerializableExtra(CARRO_SELECIONADO);
 		
 		if (carroSelecionado != null) {
 			modelo.setText(carroSelecionado.getModelo());
